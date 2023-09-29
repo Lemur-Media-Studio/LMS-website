@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Neon V2";
+    src: url("https://db.onlinewebfonts.com/t/1621a4e7a1b7ab08a993f1be8f2e6dad.woff2")format("woff2");
+    font-display: block;
+  }
+
+  @import url('https://fonts.cdnfonts.com/css/itc-benguiat-std');
+  
+  :root {
+  
+    --light-100: #ff9d00;
+    --light-200: #00E7FF;
+    --light-300: #A738D6;
+    --light-400: #bb5de4;
+    --light-500: #ffff94;
+  }
+
+  
+  .neon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .neon-wrapper {
+    position: relative;
+  }
+
+  /* NAVBAR MENU */
+  
+  .neon-text {
+    font-size: clamp(1.8rem, 1vmin, 8rem);
+    color: #ff9d00;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Neon V2", sans-serif;
+    cursor: pointer;
+  }
+
+  .neon-text:hover {
+    color: #00E7FF;
+  }
+  
+  .neon-text::after {
+    position: absolute;
+    left: 0;
+    content: attr(data-content);
+    color: transparent;
+    /*animation: flicker 1s 3s infinite linear;*/
+    opacity: 1;
+    z-index: 1;
+    text-shadow: 0.2vw 0.1vw 1vw transparent,
+    0.25vw 0.15vw 1.2vw var(--light-100),
+    0.3vw 0.2vw 1.8vw var(--light-100),
+    0.35vw 0.25vw 2vw var(--light-100);
+  }
+
+  .neon-text:hover::after {
+    position: absolute;
+    left: 0;
+    content: attr(data-content);
+    color: transparent;
+    /*animation: flicker 1s 3s infinite linear;*/
+    opacity: 1;
+    z-index: -1;
+    text-shadow: 0.2vw 0.1vw 1vw transparent,
+    0.4vw 0.2vw 1.5vw var(--light-200),
+    0.5vw 0.3vw 2vw var(--light-200),
+    0.6vw 0.4vw 2.5vw var(--light-200);
+  }
+
+  /*--------------------------------------------------------------------------------------------*/
+
+  /* TITLES SECTION */
+
+  .neon-titles {
+    color: #ff9d00;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-text-stroke: 2px #ffff94;
+    font-family: 'ITC Benguiat Std', sans-serif;
+  }
+
+  .neon-titles::after {
+    position: absolute;
+    left: 0;
+    content: attr(data-content);
+    color: transparent;
+    animation: flicker 1s 3s infinite linear;
+    opacity: 1;
+    z-index: -1;
+    text-shadow: 0.2vw 0.1vw 1vw transparent,
+    0.4vw 0.2vw 1.5vw var(--light-500),
+    0.5vw 0.3vw 2vw var(--light-100),
+    0.6vw 0.4vw 2.5vw var(--light-100);
+  }
+
+   /*--------------------------------------------------------------------------------------------*/
+
+    /* TITLES PORTFOLIO */
+
+  .neon-portfolio {
+    color: #ff9d00;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 65px;
+    -webkit-text-stroke: 2px #ffff94;
+    font-family: 'ITC Benguiat Std', sans-serif;
+  }
+
+  .neon-portfolio::after {
+    position: absolute;
+    left: 0;
+    content: attr(data-content);
+    color: transparent;
+    animation: flicker 1s 3s infinite linear;
+    opacity: 1;
+    z-index: -1;
+    text-shadow: 0.2vw 0.1vw 1vw transparent,
+    0.4vw 0.2vw 1.5vw var(--light-500),
+    0.5vw 0.3vw 2vw var(--light-100),
+    0.6vw 0.4vw 2.5vw var(--light-100);
+  }
+
+   /*--------------------------------------------------------------------------------------------*/
+
+   /* BANNER SECTION */
+
+   .neon-banner {
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'ITC Benguiat Std', sans-serif;
+  }
+
+  .neon-banner::after {
+    position: absolute;
+    left: 0;
+    content: attr(data-content);
+    color: transparent;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  .neon-color1 {
+    -webkit-text-stroke: 2px #ff9d00;
+  }
+
+  .neon-color1::after{
+    text-shadow: 0.2vw 0.1vw 1vw transparent,
+    0.4vw 0.2vw 1.5vw var(--light-100),
+    0.5vw 0.3vw 2vw var(--light-100),
+    0.6vw 0.4vw 2.5vw var(--light-100);
+  }
+
+  .neon-color2 {
+    -webkit-text-stroke: 2px #ffff94;
+  }
+
+  .neon-color2::after{
+    text-shadow: 0.2vw 0.1vw 1vw transparent,
+    0.4vw 0.2vw 1.5vw var(--light-500),
+    0.5vw 0.3vw 2vw var(--light-100),
+    0.6vw 0.4vw 2.5vw var(--light-100);
+  }
+
+  .neon-color3 {
+    -webkit-text-stroke: 2px #bb5de4;
+  }
+
+  .neon-color3::after{
+    text-shadow: 0.2vw 0.1vw 1vw transparent,
+    0.4vw 0.2vw 1.5vw var(--light-400),
+    0.5vw 0.3vw 2vw var(--light-400),
+    0.6vw 0.4vw 2.5vw var(--light-400);
+  }
+
+  .neon-animation {
+    animation: blink 1s 3s infinite linear;
+  }
+
+   /*--------------------------------------------------------------------------------------------*/
+
+   /* SLOGAN TITLE */
+
+   .neon-slogan {
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-text-stroke: 2px #ffff94;
+    font-family: 'ITC Benguiat Std', sans-serif;
+  }
+
+  .neon-slogan::after {
+    position: absolute;
+    left: 0;
+    content: attr(data-content);
+    color: transparent;
+    opacity: 1;
+    z-index: -1;
+    text-shadow: 0.1vw 0.1vw 1vw transparent,
+    0.2vw 0.2vw 1.5vw var(--light-100),
+    0.3vw 0.3vw 2vw var(--light-100),
+    0.4vw 0.4vw 2.5vw var(--light-100);
+  }
+
+
+    /*--------------------------------------------------------------------------------------------*/
+  
+  .neon-light {
+    animation: blink 1s,
+    blink 1s 1000ms,
+    blink 1s 2000ms forwards;
+  
+    text-shadow: 
+    0.1vw 0 0.25vw var(--light-100),
+    0.2vw 0 0.25vw var(--light-100),
+    0.4vw 0 0.25vw var(--light-100),
+  
+    0.1vw 0 2vw var(--light-200),
+    0.2vw 0 2vw var(--light-200),
+    0.4vw 0 2vw var(--light-200),
+  
+    0.1vw 0 8vw var(--light-300),
+    0.2vw 0 10vw var(--light-300),
+    0.4vw 0 15vw var(--light-300),
+  
+  } 
+
+  /* ANIMATIONS */
+
+  @keyframes flicker {
+    0%, 100% {
+     opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 19.9%, 22%, 62.9%, 64.9%, 70%, 100% {
+     opacity: 1;
+    }
+  
+    20%, 21.9%, 63%, 63.9%, 65%, 69.9% {
+      opacity: 0;
+    }
+  }
