@@ -1,0 +1,64 @@
+.flags{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.flags img{
+    cursor: pointer;
+}
+
+.uk-flag{
+    opacity: 0.3;
+}
+
+.uk-flag:hover{
+    opacity: 1;
+    box-shadow: 0 0 50px #012169,
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.uk-flag:active{
+    opacity: 1;
+    box-shadow: 0 0 80px #012169,
+    0 0 60px rgba(255, 255, 255, 0.5),
+    0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+.germany-flag{
+    opacity: 0.4;
+    margin: 0 10px;
+}
+
+.germany-flag:hover{
+    opacity: 1;
+    box-shadow:  0 0 50px rgba(128, 7, 7, 0.7), /* Rojo abajo */
+    0 0 20px rgba(231, 161, 31, 0.664), /* Amarillo en los costados */
+    0 0 100px rgba(0, 0, 0, 0.8); /* Negro arriba */
+}
+
+.germany-flag:active{
+    opacity: 1;
+    box-shadow:  0 0 80px rgba(128, 7, 7, 0.7), /* Rojo abajo */
+    0 0 50px rgba(231, 161, 31, 0.664), /* Amarillo en los costados */
+    0 0 100px rgba(0, 0, 0, 0.8); /* Negro arriba */
+}
+
+.spain-flag{
+    opacity: 0.4;
+}
+
+.spain-flag:hover{
+    opacity: 1;
+    box-shadow:  0 0 50px rgba(128, 7, 7, 0.7), /* Rojo abajo */
+    0 0 20px rgba(228, 231, 31, 0.842), /* Amarillo en los costados */
+    0 0 100px rgba(0, 0, 0, 0.8); /* Negro arriba */
+}
+
+.spain-flag:active{
+    opacity: 1;
+    box-shadow:  0 0 80px rgba(128, 7, 7, 0.7), /* Rojo abajo */
+    0 0 50px rgba(228, 231, 31, 0.842), /* Amarillo en los costados */
+    0 0 100px rgba(0, 0, 0, 0.8); /* Negro arriba */
+}

@@ -4,16 +4,19 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PageNotFound, Portfolio } from './sections/index'
+import LanguageProvider from './Context/Context';
 
 ReactDOM.render(
   
+  <LanguageProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
-    </BrowserRouter>,
+    </BrowserRouter>
+  </LanguageProvider>,
   
   document.getElementById('root')
 );

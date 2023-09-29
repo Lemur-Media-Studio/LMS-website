@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import NeonText from './Neontext';
 import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { LanguageContext } from '../Context/Context';
 
 const NavContainer = styled(motion.div)`
 width: 100vw;
@@ -77,6 +78,8 @@ const NavBar = () => {
     const [click, setClick] = useState(false);
     const { scroll } = useLocomotiveScroll();
 
+    const context = useContext(LanguageContext);
+
     const handleScroll = (id) => {
         let elem = document.querySelector(id);
         // console.log(elem);
@@ -108,11 +111,11 @@ const NavBar = () => {
                 dragElastic={0.05}
                 dragSnapToOrigin
             >
-                <MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Home")}><NeonText type="neon-text neon-wrapper" text="home" data="home" /></MenuItem>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".About")}><NeonText type="neon-text neon-wrapper" text="about us" data="about us" /></MenuItem>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Services")}><NeonText type="neon-text neon-wrapper" text="services" data="services" /></MenuItem>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Testimonial")}><NeonText type="neon-text neon-wrapper" text="testimonials" data="testimonials" /></MenuItem>
+                <MenuBtn onClick={() => setClick(!click)}>{context.german ? "Menü" : context.spanish ? "Menú" : "Menu"}</MenuBtn>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Home")}><NeonText type="neon-text neon-wrapper" text={context.spanish ? "Inicio" : "Home"} data={context.spanish ? "Inicio" : "Home"} /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".About")}><NeonText type="neon-text neon-wrapper" text={context.german ? "Über uns" : context.spanish ? "Nosotros" : "About us"} data={context.german ? "Über uns" : context.spanish ? "Nosotros" : "About us"} /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Services")}><NeonText type="neon-text neon-wrapper" text={context.spanish ? "Servicios" : "Services"} data={context.spanish ? "Servicios" : "Services"} /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Testimonial")}><NeonText type="neon-text neon-wrapper" text={context.german ? "Über uns" : context.spanish ? "Testimonios" : "Testimonials"} data={context.german ? "Über uns" : context.spanish ? "Testimonios" : "Testimonials"} /></MenuItem>
             </MenuItems>
         </NavContainer>
     )

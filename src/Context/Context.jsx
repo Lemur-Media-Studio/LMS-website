@@ -3,8 +3,8 @@ export const LanguageContext = React.createContext()
 
 function LanguageProvider({children}){
     
-    const [german, setGerman] = useState(localStorage.getItem('language', 'german'))
-    const [spanish, setSpanish] = useState(localStorage.getItem('language', 'spanish'))
+    const [german, setGerman] = useState(localStorage.getItem('language') === 'german')
+    const [spanish, setSpanish] = useState(localStorage.getItem('language') === 'spanish')
 
     const handleEnglish = () => {
         setGerman(localStorage.removeItem('language', 'german'));

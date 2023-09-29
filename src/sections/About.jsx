@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 
 import img1 from '../assets/lemur-animado.gif';
@@ -6,6 +6,7 @@ import img2 from '../assets/Images/retrolemur-1.png';
 import img3 from '../assets/Images/retrolemur-2.png';
 import ladrillos from '../assets/Images/ladrillos.jpg'
 import NeonText from '../Components/Neontext';
+import { LanguageContext } from '../Context/Context';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -137,10 +138,13 @@ const Title = styled.h1`
 `;
 
 const About = () => {
+
+  const context = useContext(LanguageContext);
+
   return (
     <Section id="fixed-target" className='About'>
       <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
-        <NeonText type="neon-titles neon-wrapper" text="About us" data="About us" />
+        <NeonText type="neon-titles neon-wrapper" text={context.german ? "Über uns" : context.spanish ? "Nosotros" : "About us"} data={context.german ? "Über uns" : context.spanish ? "Nosotros" : "About us"} />
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
         We're fashion studio based in california.
